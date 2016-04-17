@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "APNotificationCenter.h"
 
-@interface ViewController ()
+@interface ViewController ()<APNotificationCenterProtocol>
 
 @end
 
@@ -17,6 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [[APNotificationCenter defaultCenter] addObserve:self subscriptionName:@"MABI"];
+    [[APNotificationCenter defaultCenter] postData:@[@"这个社会是咋啦",@"你说呢"] toSubscriptionName:@"MABI"];
+    
+    
+}
+
+- (void)subscriptionMessage:(id)message subscriptionName:(NSString *)subscriptionName
+{
+    NSLog(@"%@ - %@",message,subscriptionName);
 }
 
 - (void)didReceiveMemoryWarning {

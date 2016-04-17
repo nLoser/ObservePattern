@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "APNotificationCenter.h"
+@interface AppDelegate ()<APNotificationCenterProtocol>
 
 @end
 
@@ -17,7 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[APNotificationCenter defaultCenter] addObserve:self subscriptionName:@"MABI"];
+    
     return YES;
+}
+
+- (void)subscriptionMessage:(id)message subscriptionName:(NSString *)subscriptionName
+{
+    NSLog(@"%@ - %@",message,subscriptionName);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

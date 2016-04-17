@@ -15,6 +15,7 @@
 		A914B2761CBA0EEC0045FDA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A914B2741CBA0EEC0045FDA1 /* LaunchScreen.storyboard */; };
 		A914B2811CBA0EEC0045FDA1 /* ObservePatternTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A914B2801CBA0EEC0045FDA1 /* ObservePatternTests.m */; };
 		A914B28C1CBA0EEC0045FDA1 /* ObservePatternUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A914B28B1CBA0EEC0045FDA1 /* ObservePatternUITests.m */; };
+		A914B29F1CBA3D3C0045FDA1 /* APNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A914B29E1CBA3D3C0045FDA1 /* APNotificationCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		A914B2871CBA0EEC0045FDA1 /* ObservePatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObservePatternUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A914B28B1CBA0EEC0045FDA1 /* ObservePatternUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObservePatternUITests.m; sourceTree = "<group>"; };
 		A914B28D1CBA0EEC0045FDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A914B29D1CBA3D3C0045FDA1 /* APNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNotificationCenter.h; sourceTree = "<group>"; };
+		A914B29E1CBA3D3C0045FDA1 /* APNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APNotificationCenter.m; sourceTree = "<group>"; };
+		A914B2A11CBA3EC90045FDA1 /* APNotificationCenterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNotificationCenterProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		A914B25A1CBA0EEB0045FDA1 = {
 			isa = PBXGroup;
 			children = (
+				A914B29C1CBA3D2A0045FDA1 /* APNotificationCenter */,
 				A914B2651CBA0EEC0045FDA1 /* ObservePattern */,
 				A914B27F1CBA0EEC0045FDA1 /* ObservePatternTests */,
 				A914B28A1CBA0EEC0045FDA1 /* ObservePatternUITests */,
@@ -138,6 +143,16 @@
 				A914B28D1CBA0EEC0045FDA1 /* Info.plist */,
 			);
 			path = ObservePatternUITests;
+			sourceTree = "<group>";
+		};
+		A914B29C1CBA3D2A0045FDA1 /* APNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				A914B29D1CBA3D3C0045FDA1 /* APNotificationCenter.h */,
+				A914B29E1CBA3D3C0045FDA1 /* APNotificationCenter.m */,
+				A914B2A11CBA3EC90045FDA1 /* APNotificationCenterProtocol.h */,
+			);
+			name = APNotificationCenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +287,7 @@
 			files = (
 				A914B26E1CBA0EEC0045FDA1 /* ViewController.m in Sources */,
 				A914B26B1CBA0EEC0045FDA1 /* AppDelegate.m in Sources */,
+				A914B29F1CBA3D3C0045FDA1 /* APNotificationCenter.m in Sources */,
 				A914B2681CBA0EEC0045FDA1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
